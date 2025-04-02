@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Loughmacrory GAA</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <style>
+body {
+    background-color: #121212;
+    color: #FFFFFF;
+    padding-top: 70px;
+}
+.container {
+    padding-left: 20px;
+}
+h1, h2 {
+    color: #FFBF00;
+}
+.btn-amber {
+    background-color: #FFBF00;
+    color: #000000;
+    border: none;
+}
+.btn-amber:hover {
+    background-color: #FFC966;
+}
+.nav-bar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #1E1E1E;
+    padding: 10px 0;
+    z-index: 1000;
+    text-align: center;
+}
+.nav-bar a {
+    color: #FFFFFF;
+    padding: 10px 15px;
+    text-decoration: none;
+    font-size: 14px;
+}
+.nav-bar a:hover {
+    background-color: #FFBF00;
+    color: #000000;
+    border-radius: 5px;
+}
+</style>
+</head>
+<body>
+
+
+<div class="nav-bar">
+    <a href="/">🏠 Home</a>
+    <a href="/calendar">📆 Event Calendar</a>
+    <a href="/gallery">📸 Photo Gallery</a>
+    <a href="/merchandise">🛒 Merchandise</a>
+    <a href="/contact">📧 Contact Us</a>
+    {% if session.get("admin") %}
+        <a href="/logout">🚪 Logout</a>
+    {% else %}
+        <a href="/login">🔐 Login</a>
+    {% endif %}
+</div>
+
+
+<div class="container text-center">
+    <h1>Contact Us</h1>
+    <p>Reach out to us with any inquiries.</p>
+</div>
+
+
+
+
+<div class="container mt-4">
+    <div style="background-color: #1E1E1E; padding: 20px; border-radius: 8px;">
+        <h4 style="color: #FFBF00;">Mens Gaelic Football Committee</h4>
+        <table class="table table-bordered" style="border-color: #FFBF00;">
+            <thead>
+                <tr>
+                    <th style="color: #FFBF00; background-color: #1E1E1E;">Role</th>
+                    <th style="color: #FFBF00; background-color: #1E1E1E;">Name</th>
+                    <th style="color: #FFBF00; background-color: #1E1E1E;">Phone</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td style="color: #FFBF00; background-color: #1E1E1E;">Secretary</td>
+                    <td style="color: #FFBF00; background-color: #1E1E1E;">Aidan Gordon</td>
+                    <td style="color: #FFBF00; background-color: #1E1E1E;">07765 581 421</td>
+                </tr>
+                <tr>
+                    <td style="color: #FFBF00; background-color: #1E1E1E;">Chairperson</td>
+                    <td style="color: #FFBF00; background-color: #1E1E1E;">Shane McCullagh</td>
+                    <td style="color: #FFBF00; background-color: #1E1E1E;">07876 455 982</td>
+                </tr>
+            
+
+</tbody>
+        </table>
+    </div>
+</div>
+
+
+
+
+<div class="container mt-4">
+    <div style="background-color: #1E1E1E; padding: 20px; border-radius: 8px;">
+        <h4 style="color: #FFBF00;">Ladies Gaelic Football Committee</h4>
+        <table class="table table-bordered" style="border-color: #FFBF00;">
+            <thead>
+                <tr>
+                    <th style="color: #FFBF00; background-color: #1E1E1E;">Role</th>
+                    <th style="color: #FFBF00; background-color: #1E1E1E;">Name</th>
+                    <th style="color: #FFBF00; background-color: #1E1E1E;">Phone</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td style="color: #FFBF00; background-color: #1E1E1E;">Chairperson</td>
+                    <td style="color: #FFBF00; background-color: #1E1E1E;">Roisin Gallagher</td>
+                    <td style="color: #FFBF00; background-color: #1E1E1E;">07911 223 456</td>
+                </tr>
+                <tr>
+                    <td style="color: #FFBF00; background-color: #1E1E1E;">Secretary</td>
+                    <td style="color: #FFBF00; background-color: #1E1E1E;">Mark Grimes</td>
+                    <td style="color: #FFBF00; background-color: #1E1E1E;">07422 334 778</td>
+                </tr>
+            
+                <tr>
+                    <tr>
+                    <td style="color: #FFBF00; background-color: #1E1E1E;">Youth Officer</td>
+                    <td style="color: #FFBF00; background-color: #1E1E1E;">Noelle Toner</td>
+                    <td style="color: #FFBF00; background-color: #1E1E1E;">07543 219 846</td>
+                </tr>
+                <tr>
+                    <td style="color: #FFBF00; background-color: #1E1E1E;">PRO</td>
+                    <td style="color: #FFBF00; background-color: #1E1E1E;">Padraigin Kelly</td>
+                    <td style="color: #FFBF00; background-color: #1E1E1E;">07411 532 760</td>
+                </tr>
+
+</tbody>
+        </table>
+    </div>
+</div>
+
+<div style="margin-bottom: 80px;"></div>
+</body>
+</html>

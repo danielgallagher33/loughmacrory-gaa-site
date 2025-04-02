@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Loughmacrory GAA</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #121212;
+            color: #FFFFFF;
+            padding-top: 70px;
+        }
+        .container {
+            padding-left: 20px;
+        }
+        h1 {
+            color: #FFBF00;
+        }
+        h2 {
+            color: #FFBF00;
+            font-size: 16px; /* Reduced header size */
+        }
+        .btn-amber {
+            background-color: #FFBF00;
+            color: #000000;
+            border: none;
+        }
+        .btn-amber:hover {
+            background-color: #FFC966;
+        }
+        .nav-bar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background-color: #1E1E1E;
+            padding: 10px 0;
+            z-index: 1000;
+            text-align: center;
+        }
+        .nav-bar a {
+            color: #FFFFFF;
+            padding: 10px 15px;
+            text-decoration: none;
+            font-size: 14px;
+        }
+        .nav-bar a:hover {
+            background-color: #FFBF00;
+            color: #000000;
+            border-radius: 5px;
+        }
+        .news-box, .sponsors-box, .results-box {
+            background-color: #1E1E1E;
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            font-size: 13px;
+        }
+        .news-box img, .sponsors-box img {
+            border-radius: 8px;
+        }
+        .results-box ul {
+            list-style: none;
+            padding: 0;
+        }
+        .results-box li {
+            padding: 3px 0;
+        }
+    </style>
+</head>
+<body>
+
+    
+<div class="nav-bar">
+    <a href="/">🏠 Home</a>
+    <a href="/calendar">📆 Event Calendar</a>
+    <a href="/gallery">📸 Photo Gallery</a>
+    <a href="/merchandise">🛒 Merchandise</a>
+    <a href="/contact">📧 Contact Us</a>
+    {% if session.get("admin") %}
+        <a href="/logout">🚪 Logout</a>
+    {% else %}
+        <a href="/login">🔐 Login</a>
+    {% endif %}
+</div>
+
+
+    <div class="container">
+        
+<div class="d-flex justify-content-center align-items-center mb-3">
+    <img src="{{ url_for('static', filename='uploads/LoughBadge.png') }}" alt="Loughmacrory Badge" height="60" style="margin-right: 15px;">
+    <h1 class="text-center m-0">Loughmacrory GAA</h1>
+</div>
+
+        <p class="text-center">Your home for football matches, events, and updates.</p>
+
+        
+<div class="row mt-4">
+    <div class="col-md-6" style="margin-left: -30px;"> <!-- Move left column further left -->
+        <h2>News and Updates</h2>
+        <div class="news-box d-flex">
+            <img src="{{ url_for('static', filename='uploads/walkforUna.jpg') }}" alt="Walk for Una" width="130">
+            <div class="ms-3">
+                <strong>Walk for Una</strong>
+                <p>Join us in supporting Una Toner with a 24-hour relay walkathon.</p>
+                <a href="https://gofund.me/9e664edc" class="btn btn-amber btn-sm">Donate</a>
+            </div>
+        </div>
+
+        
+<h2>Sponsors</h2>
+<div class="sponsors-box d-flex justify-content-around">
+    <img src="{{ url_for('static', filename='uploads/sponsors1.jpg') }}" alt="Sponsor 1" width="200">
+    <img src="{{ url_for('static', filename='uploads/sponsors2.jpg') }}" alt="Sponsor 2" width="200">
+</div>
+
+    </div>
+
+    <div class="col-md-6" style="margin-left: 30px;"> <!-- Move right column further right -->
+        <h2>Past Results</h2>
+        <div class="results-box">
+            <div class="row">
+                <div class="col-md-6">
+                    <strong>Minor Boys</strong>
+                    <ul>
+                        <li>Loughmacrory <strong>2-11</strong> — <strong>1-12</strong> Carrickmore</li>
+                        <li>Loughmacrory <strong>1-10</strong> — <strong>0-14</strong> Killyclogher</li>
+                        <li>Omagh <strong>3-09</strong> — <strong>2-12</strong> Loughmacrory</li>
+                    </ul>
+                </div>
+                <div class="col-md-6">
+                    <strong>Senior Ladies</strong>
+                    <ul>
+                        <li>Stewartstown <strong>1-13</strong> — <strong>2-10</strong> Loughmacrory</li>
+                        <li>Loughmacrory <strong>2-09</strong> — <strong>0-15</strong> Moy</li>
+                        <li>Loughmacrory <strong>3-08</strong> — <strong>1-14</strong> Kildress</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <h2>Upcoming Fixtures</h2>
+        <div class="results-box">
+            <div class="row">
+                <div class="col-md-6">
+                    <strong>Senior Men</strong>
+                    <ul>
+                        <li>Loughmacrory vs Coalisland</li>
+                        <li>Clogher vs Loughmacrory</li>
+                        <li>Loughmacrory vs Pomeroy</li>
+                    </ul>
+                </div>
+                <div class="col-md-6">
+                    <strong>Under 16 Boys</strong>
+                    <ul>
+                        <li>Loughmacrory vs Fintona</li>
+                        <li>Loughmacrory vs Trillick</li>
+                        <li>Beragh vs Loughmacrory</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <h2 style="margin-top:40px;">Jobs and Volunteer Opportunities</h2>
+        <div class="results-box">
+            <ul>
+                <li>Details coming soon. Stay tuned!</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+</div>
+</div>
+
+
+</div>
+</div>
+
+    
+    </div>
+</div>
+
+
+</div>
+
+        </div>
+    </div>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

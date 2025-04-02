@@ -1,0 +1,58 @@
+{
+    "messages": [],
+    "live_scores": [],
+    "events": [
+        {
+            "title": "Poker Night",
+            "date": "2025-04-26",
+            "url": "https://www.facebook.com/lochmhicruairigfc/posts/pfbid02B3jW1MYKVvwzGBxGAa5jVmpmVX3sHDyYqY6t8t3w4KxFMWqNddQ4wAms8XtAbbfXl"
+        },
+        {
+            "title": "Music Night",
+            "date": "2025-04-10",
+            "url": "https://www.facebook.com/lochmhicruairigfc/posts/pfbid02t5rkrJEYPG3snYrguAJJTFfe2y6we5kJ6rohBLMaAXU4fAJo9HXzTP781p84Bvbfl"
+        }
+    ],
+    "users": [
+        {
+            "username": "Aoife!23",
+            "password": "scrypt:32768:8:1$2nc6E3z9203q2QUY$c324b79c8e117d7d2903ec9a5513d876786ac4ff6ab6032647ee08f1df0658f308ca70a142baf67ff5f171a48c0710bab822d9388da31b1f669cd534728c4e2c"
+        },
+        {
+            "username": "Daniel33!",
+            "password": "scrypt:32768:8:1$tgZgmvr1jkvyi6dr$bc746f6c2abc027af00ff6d67bb3fcdfc0b75c45cb349e88dfe3b416690ad67dc4ab3df59ab4ad2507a5cb92c4946775ba625b9a4f60e8ef4ee25fa6810d37db"
+        },
+        {
+            "username": "Niamh_42",
+            "password": "scrypt:32768:8:1$4jlw9jwsCg76OMt3$fd3dc2faff735db9e71d55842383f0aa80b95cacfedfa8719af904557007673d56c1ca9ebef203b8f6c01e068769ecdcf0be395a4d8080f27afeedcdcf3d9cc0"
+        },
+        {
+            "username": "Sean*2025",
+            "password": "scrypt:32768:8:1$AEJKi4jXgA8wrODi$d4d5e6e2d3083ce736b7ed2df04fc2cfa36be15a2749ad0472bc0e0c8625f47455fc9ceeca0d3445eafc256d73fafa162d21f74a86fe7903ee1c750534833ba4"
+        },
+        {
+            "username": "Siobh\u00e1n#1",
+            "password": "scrypt:32768:8:1$6hWDHl7ATvVlexYN$84cc8be765a6c568618f0220c0e5c644a6b1a6ed6a09ef5e2056591f4d51e746d9fae9a5f99f8ca12aa08241d11844d5902226a4ee2a858f337933fa00475e69"
+        },
+        {
+            "username": "Eoin!7",
+            "password": "scrypt:32768:8:1$Ku8cfa4tCVXdUSRY$6a3881508b6a9d585fed07b5077f3c3e22da07de6726ab19d2dedaed87d2a305526ad7eb6fd896d82331359c94651ddb7c9d54872dec4627eeb034421b903cdc"
+        },
+        {
+            "username": "Ois\u00edn99",
+            "password": "scrypt:32768:8:1$mXgvuoxUfYMAqm3m$143c6e088166c46875b8fd34e1f021c05541de05020f72345e0a453a97acac1f06b6c7208a2fdb20332972f843b4eab11cfeb66570566ac0d291d12a346f6da9"
+        },
+        {
+            "username": "Aisling_15",
+            "password": "scrypt:32768:8:1$mwJyLKf39FQ8nyqF$616033b4d7d86edf6f369086cf4bfd94d6408deb92c6458f8eea610912cb860fe28d1fb45a1f1ab70ae21379bb4860ce8905ba0cc4abd6bf895b0964873a1ec6"
+        },
+        {
+            "username": "Darragh@9",
+            "password": "scrypt:32768:8:1$QeEzQOzJbhdzFigd$883b8b1ed8c62eea753b08286c449bf48eb6080f947d9657f3a9313187b5baffd6663aea01d437cae1e5507dfa7635007bd7a16d1ec38245d6feba2a77858cbb"
+        },
+        {
+            "username": "Caoimhe2024!",
+            "password": "scrypt:32768:8:1$JMbeyutsXIiAiG84$fc7bd292fe0c3336de87cdf0140255fb0d2470f71630e594441bd30d547f004bc9680b396326dfd628756a98b003e0d96ca2145e77887fe2c183571458f8804c"
+        }
+    ]
+}

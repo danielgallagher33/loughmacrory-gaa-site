@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photo Gallery - Loughmacrory GAA</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <style>
+body {
+    background-color: #121212;
+    color: #FFFFFF;
+    padding-top: 70px;
+}
+.container {
+    padding-left: 20px;
+}
+h1, h2 {
+    color: #FFBF00;
+}
+.btn-amber {
+    background-color: #FFBF00;
+    color: #000000;
+    border: none;
+}
+.btn-amber:hover {
+    background-color: #FFC966;
+}
+.nav-bar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #1E1E1E;
+    padding: 10px 0;
+    z-index: 1000;
+    text-align: center;
+}
+.nav-bar a {
+    color: #FFFFFF;
+    padding: 10px 15px;
+    text-decoration: none;
+    font-size: 14px;
+}
+.nav-bar a:hover {
+    background-color: #FFBF00;
+    color: #000000;
+    border-radius: 5px;
+}
+</style>
+</head>
+<body>
+
+
+<div class="nav-bar">
+    <a href="/">🏠 Home</a>
+    <a href="/calendar">📆 Event Calendar</a>
+    <a href="/gallery">📸 Photo Gallery</a>
+    <a href="/merchandise">🛒 Merchandise</a>
+    <a href="/contact">📧 Contact Us</a>
+    {% if session.get("admin") %}
+        <a href="/logout">🚪 Logout</a>
+    {% else %}
+        <a href="/login">🔐 Login</a>
+    {% endif %}
+</div>
+
+
+<div class="container text-center">
+    <h1>Photo Gallery</h1>
+    
+
+    {% if session.get("admin") %}
+    <div class="row justify-content-center mb-4 gx-5">
+        <div class="col-md-5">
+            <h5 class="text-warning">Upload Image</h5>
+            <form method="POST" action="/upload" enctype="multipart/form-data">
+                <input type="file" name="file" class="form-control mb-2" required>
+                <button type="submit" class="btn btn-amber w-100">Upload</button>
+            </form>
+        </div>
+        <div class="col-md-5">
+            <h5 class="text-warning">Delete Image</h5>
+            <form method="POST" action="/delete_image">
+                <input type="text" name="filename" class="form-control mb-2" placeholder="Image filename (e.g. photo.jpg)" required>
+                <button type="submit" class="btn btn-danger w-100">Delete</button>
+            </form>
+        </div>
+    </div>
+    {% endif %}
+
+    <div class="row mt-4">
+        {% for image in images %}
+        <div class="col-md-4">
+            <img src="{{ url_for('uploaded_file', filename=image) }}" class="img-fluid rounded mb-3">
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    const deleteInput = document.querySelector("input[name='filename']");
+    if (deleteInput) {
+        document.querySelectorAll(".img-fluid").forEach(img => {
+            img.addEventListener("click", function () {
+                const filename = img.src.split("/").pop();
+                deleteInput.value = filename;
+                deleteInput.scrollIntoView({ behavior: "smooth", block: "center" });
+            });
+        });
+    }
+});
+</script>
+
+</body>
+</html>
